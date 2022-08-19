@@ -1,0 +1,35 @@
+{
+  "canisters": {
+    "memory_card": {
+      "main": "src/memory_card/main.mo",
+      "type": "motoko"
+    },
+    "memory_card_assets": {
+      "dependencies": [
+        "memory_card"
+      ],
+      "frontend": {
+        "entrypoint": "src/memory_card_assets/src/index.html"
+      },
+      "source": [
+        "src/memory_card_assets/assets",
+        "dist/memory_card_assets/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "dfx": "0.10.1",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}
