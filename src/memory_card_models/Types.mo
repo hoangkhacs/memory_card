@@ -2,7 +2,7 @@ import Time "mo:base/Time";
 
 module {
     public type Card = {
-        data : Text; // giong nhu id
+        data : Text; 
     };
 
     public type Game = {
@@ -18,7 +18,5 @@ module {
 
     public type Error = {
         #NotFound;
-        #Complete;
-        #InComplete;
     }
 }
