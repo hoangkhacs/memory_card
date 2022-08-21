@@ -20,12 +20,7 @@ type Game =
    score: nat;
    time_play: Time;
  };
-type Error = 
- variant {
-   Complete;
-   InComplete;
-   NotFound;
- };
+type Error = variant {NotFound;};
 type Choice = 
  record {
    id_card_1: text;

@@ -3,9 +3,7 @@ import type { ActorMethod } from '@dfinity/agent';
 
 export interface Card { 'data' : string }
 export interface Choice { 'id_card_1' : string, 'id_card_2' : string }
-export type Error = { 'Complete' : null } |
-  { 'NotFound' : null } |
-  { 'InComplete' : null };
+export type Error = { 'NotFound' : null };
 export interface Game {
   'list_choice' : Array<Choice>,
   'time_play' : Time,

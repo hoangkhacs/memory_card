@@ -262,9 +262,9 @@ actor {
         case (_) return false;
       };
       var check_goal : Bool = await checkGoal(time_start, id_card_1, id_card_2);
-        if (check_goal == true){
-          return true;
-        };
+      if (check_goal == true){
+        return true;
+      };
       i += 1;
     };
     return false;

@@ -1,11 +1,7 @@
 export const idlFactory = ({ IDL }) => {
   const Time = IDL.Int;
   const Result_1 = IDL.Variant({ 'ok' : IDL.Null, 'err' : IDL.Null });
-  const Error = IDL.Variant({
-    'Complete' : IDL.Null,
-    'NotFound' : IDL.Null,
-    'InComplete' : IDL.Null,
-  });
+  const Error = IDL.Variant({ 'NotFound' : IDL.Null });
   const Result_2 = IDL.Variant({ 'ok' : IDL.Text, 'err' : Error });
   const Card = IDL.Record({ 'data' : IDL.Text });
   const Choice = IDL.Record({ 'id_card_1' : IDL.Text, 'id_card_2' : IDL.Text });
