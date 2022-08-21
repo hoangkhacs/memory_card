@@ -1,0 +1,59 @@
+type Time = int;
+type Result_1 = 
+ variant {
+   err: Error;
+   ok: text;
+ };
+type Result = 
+ variant {
+   err;
+   ok;
+ };
+type Game = 
+ record {
+   list_choice: vec Choice;
+   score: nat;
+   time_play: Time;
+ };
+type Error = 
+ variant {
+   Complete;
+   InComplete;
+   NotFound;
+ };
+type Choice = 
+ record {
+   id_card_1: text;
+   id_card_2: text;
+ };
+type Card = record {data: text;};
+service : {
+  arrayChoice: () -> (vec text);
+  checkGoal: (Time, text, text) -> (bool);
+  checkHacking: (vec text) -> (bool);
+  checkSameCard: (text, text) -> (bool);
+  clearChoice: () -> (Result);
+  clearData: () -> (Result);
+  countChoice: () -> (nat);
+  createCard: (text) -> (Result);
+  createChoice: (text, text) -> (Result);
+  createGame: (Time, Time) -> (Result);
+  createId: () -> (text);
+  demo: (Time, vec record {
+                     text;
+                     text;
+                   }) -> (bool);
+  findIdCard: (text) -> (Result_1);
+  initDataCard: () -> (Result);
+  listCard: () -> (vec record {
+                         text;
+                         Card;
+                       });
+  listChoice: () -> (vec Choice);
+  listGame: () -> (vec record {
+                         text;
+                         Game;
+                       });
+  readCard: (text) -> (opt Card);
+  thisTime: () -> (Time);
+}
